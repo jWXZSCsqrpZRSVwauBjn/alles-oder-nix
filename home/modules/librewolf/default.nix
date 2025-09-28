@@ -52,9 +52,6 @@ in {
             ublock-origin
             sponsorblock
             return-youtube-dislikes
-            foxyproxy-standard
-            vimium
-            wappalyzer
             bitwarden
           ];
 

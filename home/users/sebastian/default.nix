@@ -51,7 +51,6 @@
     
     user = {
       impermanence.enable = isLinux && isWorkstation;
-      ssh.enable = isLinux && isWorkstation;
       xdg.enable = isLinux && isWorkstation;
 
       packages.enable = true;
