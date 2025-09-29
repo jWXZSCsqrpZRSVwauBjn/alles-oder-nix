@@ -36,11 +36,6 @@ _: {
     '';
   };
 
-  boot.initrd.luks.devices."crypted" = {
-    device = "/dev/disk/by-partlabel/luks";
-    preLVM = true;
-  };
-
   fileSystems = {
     "/persist" = {
       neededForBoot = true;
@@ -73,7 +68,7 @@ _: {
               };
             };
 
-            luks = {
+            "disk-main-luks" = {
               size = "100%";
 
               content = {
