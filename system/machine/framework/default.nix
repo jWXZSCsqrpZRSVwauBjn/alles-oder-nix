@@ -12,7 +12,7 @@ _: {
     virtualisation.enable = true;
     stylix.enable = true;
     minimal.enable = true;
-    nixos-ng.enable = true;
+    #nixos-ng.enable = true;
     plymouth.enable = true;
     binfmt.enable = true;
     xdg.enable = true;
