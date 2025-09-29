@@ -68,7 +68,7 @@ _: {
               };
             };
 
-            "disk-main-luks" = {
+            luks = {
               size = "100%";
 
               content = {
