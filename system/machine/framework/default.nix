@@ -1,7 +1,8 @@
 _: {
   module = {
     sound.enable = true;
-    lanzaboote.enable = true;
+    #lanzaboote.enable = true;
+    boot.enable = true; 
     bluetooth.enable = true;
     locales.enable = true;
     network.enable = true;
