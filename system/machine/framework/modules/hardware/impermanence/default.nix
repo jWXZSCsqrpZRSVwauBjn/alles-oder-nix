@@ -3,8 +3,6 @@ _: {
 
   environment.persistence = {
     "/persist" = {
-      user = "0";
-      group = "0";
       hideMounts = true;
       directories = [
         "/etc/nixos"
@@ -26,6 +24,7 @@ _: {
         "/var/lib/libvirt"
         "/var/lib/systemd"
       ];
+
       files = [
         "/etc/machine-id"
         "/etc/ssh/ssh_host_ed25519_key"
