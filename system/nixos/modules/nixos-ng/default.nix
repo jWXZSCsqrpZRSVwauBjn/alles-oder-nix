@@ -24,7 +24,7 @@ in {
     system = {
       switch = {
         enable = false;
-        enableNg = false;
+        enableNg = true;
       };
 
       /*
