@@ -36,6 +36,6 @@ _: {
     };
   };
   system.activationScripts.etc-persistence = {
-    deps = [ "users-groups" ];
+    deps = [ "users" ];
   };
 }
