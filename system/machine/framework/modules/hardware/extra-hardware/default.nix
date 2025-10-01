@@ -10,7 +10,6 @@ in {
   hardware = {
     enableAllFirmware = true;
     enableRedistributableFirmware = true;
-    cpu.intel.updateMicrocode = mkDefault config.hardware.enableRedistributableFirmware;
 
     firmware = with pkgs; [
       sof-firmware

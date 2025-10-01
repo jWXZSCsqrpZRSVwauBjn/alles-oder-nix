@@ -4,6 +4,7 @@ _: {
   environment.persistence = {
     "/persist" = {
       hideMounts = true;
+
       directories = [
         "/etc/nixos"
         "/etc/NetworkManager/system-connections"
@@ -34,5 +35,7 @@ _: {
       ];
     };
   };
-  system.activationScripts.createPersistentStorageDirs.after = [ "users" ];
+  system.activationScripts.etc-persistence = {
+    deps = [ "users-groups" ];
+  };
 }
