@@ -53,4 +53,8 @@ _: {
       systemPackages.enable = true;
     };
   };
+  system.activationScripts."createPersistentStorageDirs".deps = [ 
+    "users" 
+    "groups" 
+  ];
 }
