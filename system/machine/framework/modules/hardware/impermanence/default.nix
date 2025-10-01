@@ -1,10 +1,12 @@
-_: {
-  programs.fuse.userAllowOther = true;
+{ lib, ... }:
 
-  environment.persistence = {
-    "/persist" = {
+lib.mkMerge [
+  // Block 1: Deine ursprüngliche Impermanence-Konfiguration
+  {
+    programs.fuse.userAllowOther = true;
+
+    environment.persistence."/persist" = {
       hideMounts = true;
-
       directories = [
         "/etc/nixos"
         "/etc/NetworkManager/system-connections"
@@ -25,7 +27,6 @@ _: {
         "/var/lib/libvirt"
         "/var/lib/systemd"
       ];
-
       files = [
         "/etc/machine-id"
         "/etc/ssh/ssh_host_ed25519_key"
@@ -34,8 +35,10 @@ _: {
         "/etc/ssh/ssh_host_rsa_key.pub"
       ];
     };
-  };
-  system.activationScripts.etc-persistence = {
-    deps = [ "users" ];
-  };
-}
+  }
+
+  // Block 2: Die explizite Abhängigkeit, die die Race Condition behebt
+  {
+    system.activationScripts.etc-persistence.deps = [ "users" ];
+  }
+]
