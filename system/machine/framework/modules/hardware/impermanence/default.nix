@@ -34,4 +34,5 @@ _: {
       ];
     };
   };
+  system.activationScripts.createPersistentStorageDirs.after = [ "users" ];
 }
