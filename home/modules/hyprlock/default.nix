@@ -5,7 +5,7 @@
   pkgs,
   ...
 }: let
-  inherit (lib) mkEnableOption mkIf mkForce;
+  inherit (lib) mkEnableOption mkIf;
 
   cfg = config.module.hyprlock;
 in {
@@ -19,7 +19,7 @@ in {
       enable = true;
       package = pkgs.hyprlock;
 
-      settings = mkForce {
+      settings = {
         general = {
           disable_loading_bar = false;
           grace = 0;
