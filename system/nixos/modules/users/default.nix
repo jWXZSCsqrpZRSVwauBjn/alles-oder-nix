@@ -32,7 +32,7 @@ in {
           group = "${username}";
           createHome = true;
           description = "${username}";
-          isNormalUser = true;
+          isSystemUser = true;
           hashedPasswordFile = "${self}/secrets/hashes/${username}.hash";
 
           extraGroups = [
