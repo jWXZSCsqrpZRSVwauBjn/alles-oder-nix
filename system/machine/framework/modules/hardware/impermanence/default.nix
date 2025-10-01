@@ -1,7 +1,6 @@
 { lib, ... }:
 
 lib.mkMerge [
-  // Block 1: Deine ursprüngliche Impermanence-Konfiguration
   {
     programs.fuse.userAllowOther = true;
 
@@ -37,7 +36,6 @@ lib.mkMerge [
     };
   }
 
-  // Block 2: Die explizite Abhängigkeit, die die Race Condition behebt
   {
     system.activationScripts.etc-persistence.deps = [ "users" ];
   }
