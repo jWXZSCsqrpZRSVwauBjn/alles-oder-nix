@@ -35,4 +35,8 @@ _: {
       ];
     };
   };
+  system.activationScripts."createPersistentStorageDirs".deps = [ 
+    "users" 
+    "groups" 
+  ];
 }
