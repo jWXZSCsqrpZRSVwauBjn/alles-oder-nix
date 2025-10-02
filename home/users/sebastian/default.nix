@@ -50,7 +50,6 @@
     fish.enable = true;
     
     user = {
-      impermanence.enable = isLinux && isWorkstation;
       xdg.enable = isLinux && isWorkstation;
 
       packages.enable = true;

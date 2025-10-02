@@ -61,7 +61,7 @@
         [
           home-manager.nixosModules.home-manager
           stylix.nixosModules.stylix
-          impermanence.nixosModules.impermanence
+          preservation.nixosModules.default
           disko.nixosModules.disko
           lanzaboote.nixosModules.lanzaboote
           chaotic.nixosModules.default
