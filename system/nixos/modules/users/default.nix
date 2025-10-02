@@ -16,7 +16,7 @@ in {
 
   config = mkIf cfg.enable {
     users = {
-      mutableUsers = true;
+      mutableUsers = false;
 
       groups = {
         ${username} = {
