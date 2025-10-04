@@ -43,6 +43,10 @@ in {
       };
 
       settings = {
+        debug = {
+          disable_logs = false;
+        };
+
         env = [
           "XDG_CURRENT_DESKTOP,Hyprland"
           "XDG_SESSION_DESKTOP,Hyprland"
@@ -97,7 +101,7 @@ in {
         };
 
         input = {
-          kb_layout = "us,ru";
+          kb_layout = "de";
           kb_options = "grp:caps_toggle";
           accel_profile = "flat";
           sensitivity = 0.0;

@@ -1,4 +1,8 @@
-_: {
+{ inputs, ... }: {
+  imports = [
+    # Importiert das passende nixos-hardware Profil für das Framework 13 mit AMD 7040 series CPU
+    inputs.nixos-hardware.nixosModules.framework-13-7040-amd
+  ];
   module = {
     sound.enable = true;
     #lanzaboote.enable = true;

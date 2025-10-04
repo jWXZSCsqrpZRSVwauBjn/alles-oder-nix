@@ -42,6 +42,10 @@ in {
             "docker"
             "libvirtd"
             "yggdrasil"
+            "video"
+            "seat"
+            "input"
+            "render"
           ];
         };
 

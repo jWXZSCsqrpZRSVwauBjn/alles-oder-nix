@@ -6,19 +6,7 @@
 }: let
   inherit (lib) mkDefault;
 in {
-  # Extra drivers settings
-  hardware = {
-    enableAllFirmware = true;
-    enableRedistributableFirmware = true;
-
-    firmware = with pkgs; [
-      sof-firmware
-      linux-firmware
-    ];
-
-    logitech.wireless = {
-      enable = true;
-      enableGraphical = true;
-    };
-  };
+  # AMD Microcode Update
+  hardware.cpu.amd.updateMicrocode = lib.mkDefault config.hardware.enableRedistributableFirmware;
+  hardware.enableRedistributableFirmware = true;
 }

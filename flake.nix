@@ -21,6 +21,11 @@
       follows = "unstable";
     };
 
+    # Hardware-specific configurations
+    nixos-hardware = {
+      url = "github:NixOS/nixos-hardware";
+    };
+
     # NixOS community
     home-manager = {
       url = "github:nix-community/home-manager";

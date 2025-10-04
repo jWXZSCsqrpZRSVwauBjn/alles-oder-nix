@@ -37,7 +37,7 @@ in {
         libinput.enable = true;
 
         xkb = {
-          layout = "us";
+          layout = "de";
           variant = "";
         };
       };
